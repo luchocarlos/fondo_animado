@@ -1,0 +1,110 @@
+* {
+    padding:  0 1em;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(-80deg, #fff52e, #ff3090,  #3bffd5);
+    background-size: 400% 300%;
+    background-repeat: no-repeat;
+    animation: fondo 6s infinite;
+}
+
+
+@keyframes fondo {    
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+nav{
+    text-align: center;
+}
+
+h1{
+    background: rgb(250, 250, 250, 0.3);
+    color: whitesmoke;
+    padding: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contenido{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding:  1em;
+    grid-gap:1em ;
+    width: 80em;
+}
+
+.foto{
+    background: rgb(250, 250, 250, 0.3);
+    max-width: 39em;
+    max-height: 28em;
+    text-align: center;     
+}
+
+img{
+    margin: 8%;
+    width: 80%;
+    height: 80%;
+}
+
+.datos{
+    background: rgb(250, 250, 250, 0.3);
+    text-align: center;
+    max-width: 39em;
+    max-height: 28em;
+    font-size: 20px;
+}
+
+.datos p{
+    margin: 8%;
+    color: rgb(255, 255, 255);
+}
+
+
+
+@media screen and (min-width: 780px) and (max-width: 1024px) {
+    .contenido{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2em;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 780px){    
+    
+    .contenido{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2em;
+    }
+    
+    .foto, img, .datos{
+        width: 44%;
+    }
+   
+    img{
+        width: 80%;
+    }
+    
+    
+}
+
+@media screen and (max-width: 480px){    
+    
+    .contenido{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2em;
+    }
+    
+    .foto, img, .datos{
+        width: 22%;
+    }
+   
+    img{
+        width: 80%;
+    }
+
+}
